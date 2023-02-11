@@ -10,6 +10,8 @@ import lombok.Data;
 @Data
 public class DataVo<T> {
     private Integer code;
+    private Long count;
+
 
     private String message;
 
@@ -17,12 +19,12 @@ public class DataVo<T> {
 
 
     public Integer ok() {
-        return  this.code = 200;
+        return  this.code = 0;
 
     }
 
     public Integer error() {
-        return this.code = 500;
+        return this.code = 1;
 
     }
 

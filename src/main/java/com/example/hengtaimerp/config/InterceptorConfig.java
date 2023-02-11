@@ -11,7 +11,8 @@ public class InterceptorConfig implements WebMvcConfigurer {
 
     //放行
     private String[] arp = {
-            "user/api/login"
+            "/user/api/login",
+            "/test"
 
 
 
@@ -19,7 +20,7 @@ public class InterceptorConfig implements WebMvcConfigurer {
     //拦截
     private String[] atr = {
 
-            "/test"
+            "/bom/import"
 
     };
     @Override
