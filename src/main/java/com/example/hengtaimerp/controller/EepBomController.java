@@ -122,4 +122,22 @@ public class EepBomController {
     public DataVo selBom(@RequestParam("subpartCoding") String subpartCoding,@RequestParam("page") Integer page, @RequestParam("limit") Integer limit ) {
         return erpBomServices.selBom(subpartCoding,page,limit);
     }
+
+
+
+    @PostMapping("/del")
+    public DataVo delBom(@RequestBody ErpBom erpBom){
+
+        return erpBomServices.delBom(erpBom);
+
+
+    }
+
+    @PostMapping("/update")
+    public DataVo updateBom(@RequestBody ErpBom erpBom){
+
+        return erpBomServices.updateBom(erpBom);
+
+
+    }
 }

@@ -3,6 +3,7 @@ package com.example.hengtaimerp.entity;
 import com.alibaba.excel.annotation.ExcelIgnore;
 import com.alibaba.excel.annotation.ExcelIgnoreUnannotated;
 import com.alibaba.excel.annotation.ExcelProperty;
+import com.alibaba.excel.annotation.write.style.ColumnWidth;
 import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableId;
@@ -32,72 +33,84 @@ public class ErpMaterial implements Serializable {
     /**
      * 物料编码
      */
+    @ColumnWidth(12)
     @ExcelProperty(value = "物料编码", index = 0)
     private String materialCode;
 
     /**
      * 物料名称
      */
+    @ColumnWidth(12)
     @ExcelProperty(value = "物料名称", index = 1)
     private String materialName;
 
     /**
      * 规格型号
      */
+    @ColumnWidth(12)
     @ExcelProperty(value = "规格型号", index = 2)
     private String specificationAndModel;
 
     /**
      * 图号
      */
+    @ColumnWidth(12)
     @ExcelProperty(value = "图号", index = 3)
     private String drawingNumber;
 
     /**
      * 类别
      */
+    @ColumnWidth(12)
     @ExcelProperty(value = "物料组", index = 4)
     private String category;
 
     /**
      * 仓库
      */
+    @ColumnWidth(12)
     @ExcelProperty(value = "仓库", index = 5)
     private String warehouse;
 
     /**
      * 生产车间
      */
+    @ColumnWidth(12)
     @ExcelProperty(value = "生产车间", index = 6)
     private String productionShop;
 
     /**
      * 常用单位
      */
+    @ColumnWidth(12)
     @ExcelProperty(value = "常用单位", index = 7)
     private String commonUnit;
 
     /**
      * 基本单位
      */
+    @ColumnWidth(12)
     @ExcelProperty(value = "基本单位", index = 8)
     private String basicUnit;
 
     /**
      * 库存上限
      */
+    @ColumnWidth(12)
     @ExcelProperty(value = "库存上限", index = 9)
     private String inventoryCeiling;
 
     /**
      * 库存下限
      */
+    @ColumnWidth(12)
     @ExcelProperty(value = "库存下限", index = 10)
     private String inventoryFloor;
 
     /**
      * 类型
      */
+    @ColumnWidth(12)
     @ExcelProperty(value = "类型", index = 11)
     private String type;
 
@@ -110,6 +123,7 @@ public class ErpMaterial implements Serializable {
     /**
      * 备注
      */
+    @ColumnWidth(50)
     @ExcelProperty(value = "备注", index = 12)
     private String remarks;
 

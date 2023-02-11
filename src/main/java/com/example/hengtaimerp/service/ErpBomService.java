@@ -24,4 +24,8 @@ public interface ErpBomService extends IService<ErpBom> {
     DataVo iExcel(MultipartFile file, HttpServletRequest httpRequest);
 
 
+    DataVo delBom(ErpBom erpBom);
+
+
+    DataVo updateBom(ErpBom erpBom);
 }

@@ -6,16 +6,28 @@ import com.alibaba.excel.context.AnalysisContext;
 import com.alibaba.excel.event.AnalysisEventListener;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 public class ExcelListener extends AnalysisEventListener {
     //可以通过实例获取该值
+
+    private static final int BATCH_COUNT = 100;
     private List<Object> data = new ArrayList<Object>();
+
 
     @Override
     public void invoke(Object o, AnalysisContext analysisContext) {
+
         data.add(o);//数据存储到list，供批量处理，或后续自己业务逻辑处理。
-        doSomething(o);//根据自己业务做处理
+        if (data.size() >= BATCH_COUNT) {
+            saveData();
+        }
+        data.clear();
+
+    }
+
+    private void saveData() {
     }
 
     private void doSomething(Object object) {
