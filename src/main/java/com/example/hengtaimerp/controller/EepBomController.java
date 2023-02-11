@@ -25,8 +25,7 @@ public class EepBomController {
 
     @Autowired
     ErpBomService erpBomServices;
-    @Autowired
-    ErpBomVoMapper erpBomVoMapper;
+
 
     @Autowired
     ErpBomMapper erpBomMapper;
