@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.hengtaimerp.mapper.ErpBomMapper">
+
+    <resultMap id="BaseResultMap" type="com.example.hengtaimerp.entity.ErpBom">
+            <id property="id" column="id" jdbcType="INTEGER"/>
+            <result property="bomSection" column="bom_section" jdbcType="INTEGER"/>
+            <result property="masterPartName" column="master_part_name" jdbcType="VARCHAR"/>
+            <result property="masterComponentCoding" column="master_component_coding" jdbcType="VARCHAR"/>
+            <result property="mainPartSpecificationsAndModels" column="main_part_specifications_and_models" jdbcType="VARCHAR"/>
+            <result property="masterPartsAreStored" column="master_parts_are_stored" jdbcType="VARCHAR"/>
+            <result property="mainPartsProductionShop" column="main_parts_production_shop" jdbcType="VARCHAR"/>
+            <result property="masterUnit" column="master_unit" jdbcType="VARCHAR"/>
+            <result property="volumeOfMainParts" column="volume_of_main_parts" jdbcType="INTEGER"/>
+            <result property="subpartCoding" column="subpart_coding" jdbcType="VARCHAR"/>
+            <result property="subpartMaterialName" column="subpart_material_name" jdbcType="VARCHAR"/>
+            <result property="componentSpecificationsAndModels" column="component_specifications_and_models" jdbcType="VARCHAR"/>
+            <result property="subroutineExitWarehouse" column="subroutine_exit_warehouse" jdbcType="VARCHAR"/>
+            <result property="subunit" column="subunit" jdbcType="VARCHAR"/>
+            <result property="componentDosage" column="component_dosage" jdbcType="INTEGER"/>
+            <result property="documenter" column="documenter" jdbcType="VARCHAR"/>
+            <result property="documentMakingTime" column="document_making_time" jdbcType="TIMESTAMP"/>
+            <result property="modifier" column="modifier" jdbcType="VARCHAR"/>
+            <result property="modificationTime" column="modification_time" jdbcType="TIMESTAMP"/>
+            <result property="auditor" column="auditor" jdbcType="VARCHAR"/>
+            <result property="auditTime" column="audit_time" jdbcType="TIMESTAMP"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        id,bom_section,master_part_name,
+        master_component_coding,main_part_specifications_and_models,master_parts_are_stored,
+        main_parts_production_shop,master_unit,volume_of_main_parts,
+        subpart_coding,subpart_material_name,component_specifications_and_models,
+        subroutine_exit_warehouse,subunit,component_dosage,
+        documenter,document_making_time,modifier,
+        modification_time,auditor,audit_time
+    </sql>
+</mapper>

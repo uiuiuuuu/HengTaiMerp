@@ -1,0 +1,26 @@
+server:
+  port: 8000
+
+spring:
+  thymeleaf:
+    servlet:
+      content-type: text/html
+    prefix: classpath:/templates/
+    suffix: .html
+
+
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url:  jdbc:mysql://localhost:3306/system_normal?useUnicode=true&characterEncoding=UTF-8&serverTimezone=UTC
+    username: root
+    password: root
+    type: com.mysql.cj.jdbc.MysqlConnectionPoolDataSource
+
+mybatis-plus:
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl #打印sql语句
+    map-underscore-to-camel-case: true #自动驼峰映射
+  mapper-locations: classpath:/mapper/*.xml #资源文件
+
+
+
